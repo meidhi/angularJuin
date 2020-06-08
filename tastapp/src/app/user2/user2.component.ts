@@ -17,11 +17,7 @@ export class User2Component implements OnInit {
   constructor(private data: TestService) { }
 
   ngOnInit(): void {
-
     this.collection$ = this.data.collection;
-    console.log(this.data.collection);
-    console.log(" ici ==> " + this.collection$);
-
   }
 
 
