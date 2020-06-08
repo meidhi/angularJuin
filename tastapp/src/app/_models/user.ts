@@ -5,4 +5,10 @@ export class User implements Iuser {
   nom: string;
   prenom: string
   reF_COLLABORATEUR: number;
+
+  constructor(obj?: Partial<User>) {
+    if (obj) {
+      Object.assign(this, obj);
+    }
+  }
 }

@@ -1,7 +1,9 @@
+<table *ngIf="collection$ | async as collection">
+  <tr *ngFor="let item of collection">
 
-<ul>
-<div *ngFor="let item of myusers">
-<li>{{item.comptE_NT}}}</li>
+    <td>
+      {{item.nom}}
+    </td>
 
-</div>
-</ul>
+  </tr>
+</table>

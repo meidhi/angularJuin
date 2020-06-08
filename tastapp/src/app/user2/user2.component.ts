@@ -10,16 +10,17 @@ import { User } from '../_models/user';
 })
 export class User2Component implements OnInit {
 
-  // myusers$: Object;
-  myusers$: Observable<User[]>;
-  myusers: User[];
+  public collection$: Observable<User[]>;
 
-  constructor(private data: TestService) {}
 
-  ngOnInit(){
 
-    // this.data.getTest().subscribe(data =>(this.myusers=this.data));
-    this.myusers$ = this.data.collection;
+  constructor(private data: TestService) { }
+
+  ngOnInit(): void {
+
+    this.collection$ = this.data.collection;
+    console.log(this.data.collection);
+    console.log(" ici ==> " + this.collection$);
 
   }
 
